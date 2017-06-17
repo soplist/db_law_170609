@@ -1,0 +1,20 @@
+drop database if exists law_170609 ;
+create database law_170609;
+use law_170609;
+
+create table user(
+id int(10) not null auto_increment,
+username varchar(50) not null,
+password varchar(50) not null,
+create_time date not null,
+primary key(id)
+);
+
+insert into user values(1,'jack','123456','2017-06-09');
+
+create table image(
+id int(10) not null auto_increment,
+original_name varchar(200) not null,
+generate_name varchar(200) not null,
+primary key(id)
+)
